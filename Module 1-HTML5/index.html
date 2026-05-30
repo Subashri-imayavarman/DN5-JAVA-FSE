@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neighborhood Event Hub</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background-color:#eef5ff;
+}
+
+header{
+    background-color:#0066cc;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background-color:#004d99;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffeb3b;
+}
+
+#welcomeBanner{
+    background-color:#d9ecff;
+    padding:15px;
+    text-align:center;
+    font-size:18px;
+}
+
+.highlight{
+    color:#0066cc;
+}
+
+section{
+    padding:20px;
+}
+
+h2{
+    color:#004d99;
+}
+
+table{
+    margin:auto;
+}
+
+.event-img{
+    width:220px;
+    height:140px;
+    border:2px solid #004d99;
+    border-radius:5px;
+}
+
+form{
+    background:white;
+    width:70%;
+    margin:auto;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0px 0px 5px lightgray;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    background-color:#0066cc;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#004d99;
+}
+
+footer{
+    background-color:#004d99;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<header>
+    <h1>Neighborhood Event Hub</h1>
+    <p>Connecting Residents Through Local Events</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+</nav>
+
+<!-- Main Content -->
+
+<div id="welcomeBanner">
+    Welcome to our Community Event Portal!
+    <span style="color:red;font-weight:bold;">
+        Free Registration for First 50 Participants
+    </span>
+</div>
+
+<section id="home">
+    <h2 class="highlight">Home</h2>
+    <p>
+        Explore community meetings, sports events, workshops,
+        food festivals and awareness programs happening around you.
+    </p>
+</section>
+
+<section id="events">
+
+<h2>Event Gallery</h2>
+
+<table>
+
+<tr>
+
+<td>
+<img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
+alt="Community Meeting"
+title="Community Meeting"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Community Meeting</p>
+</td>
+
+<td>
+<img src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg"
+alt="Sports Event"
+title="Sports Event"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Sports Event</p>
+</td>
+
+<td>
+<img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg"
+alt="Food Festival"
+title="Food Festival"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Food Festival</p>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg"
+alt="Music Program"
+title="Music Program"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Music Program</p>
+</td>
+
+<td>
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+alt="Workshop"
+title="Workshop"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Workshop</p>
+</td>
+
+<td>
+<img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg"
+alt="Awareness Program"
+title="Awareness Program"
+class="event-img"
+ondblclick="enlargeImage(this)">
+<p>Awareness Program</p>
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Event Registration Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="Enter your name" required autofocus>
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
+
+<label>Phone Number</label>
+<input type="text" id="phone"
+placeholder="Enter 10 digit number"
+onblur="validatePhone()">
+
+<label>Event Date</label>
+<input type="date" required>
+
+<label>Event Type</label>
+
+<select id="eventType" onchange="showFee()">
+<option value="">Select Event</option>
+<option value="Sports">Sports</option>
+<option value="Music">Music</option>
+<option value="Cultural">Cultural</option>
+</select>
+
+<p id="fee"></p>
+
+<label>Message</label>
+
+<textarea id="feedback"
+rows="4"
+placeholder="Enter your message"
+onkeyup="countCharacters()"></textarea>
+
+<p>Characters Typed: <span id="count">0</span></p>
+
+<button type="button" onclick="registerUser()">Register</button>
+
+<br><br>
+
+<output id="output"></output>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Event Promotion Video</h2>
+
+<video width="450" controls oncanplay="videoReady()">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
+
+<p id="videoMessage"></p>
+
+</section>
+
+<section>
+
+<h2>Find Nearby Events</h2>
+
+<button onclick="findLocation()">Find Nearby Events</button>
+
+<p id="location"></p>
+
+</section>
+
+<section id="contact">
+
+<h2 class="highlight">Contact</h2>
+
+<p>Email: support@eventhub.com</p>
+<p>Phone: +91 9876543210</p>
+
+</section>
+
+<center>
+<button onclick="clearPreferences()">Clear Preferences</button>
+</center>
+
+<br>
+
+<!-- Footer -->
+
+<footer>
+    <p>© 2026 Neighborhood Event Hub</p>
+</footer>
+
+<script>
+
+function validatePhone(){
+    let phone=document.getElementById("phone").value;
+
+    if(phone.length!=10){
+        alert("Please enter a valid 10 digit phone number");
+    }
+}
+
+function showFee(){
+
+    let event=document.getElementById("eventType").value;
+    let fee="";
+
+    if(event=="Sports")
+        fee="Event Fee : ₹100";
+
+    else if(event=="Music")
+        fee="Event Fee : ₹150";
+
+    else if(event=="Cultural")
+        fee="Event Fee : ₹200";
+
+    document.getElementById("fee").innerHTML=fee;
+
+    localStorage.setItem("preferredEvent",event);
+}
+
+window.onload=function(){
+
+    let saved=localStorage.getItem("preferredEvent");
+
+    if(saved){
+        document.getElementById("eventType").value=saved;
+        showFee();
+    }
+};
+
+function registerUser(){
+
+    document.getElementById("output").innerHTML=
+    "Registration Submitted Successfully!";
+}
+
+function enlargeImage(img){
+
+    img.style.width="260px";
+    img.style.height="170px";
+}
+
+function countCharacters(){
+
+    let text=document.getElementById("feedback").value;
+
+    document.getElementById("count").innerHTML=text.length;
+}
+
+function videoReady(){
+
+    document.getElementById("videoMessage").innerHTML=
+    "Video Ready To Play";
+}
+
+window.onbeforeunload=function(){
+    return "Your form may not be saved.";
+};
+
+function clearPreferences(){
+
+    localStorage.clear();
+    sessionStorage.clear();
+
+    alert("Preferences Cleared");
+}
+
+function findLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+document.getElementById("location").innerHTML=
+"Latitude : " + position.coords.latitude +
+"<br>Longitude : " + position.coords.longitude;
+
+},
+
+function(error){
+
+if(error.code==1)
+alert("Permission Denied");
+
+if(error.code==3)
+alert("Location Request Timed Out");
+},
+
+{
+enableHighAccuracy:true,
+timeout:5000
+}
+
+);
+
+}
+}
+
+</script>
+
+</body>
+</html>
