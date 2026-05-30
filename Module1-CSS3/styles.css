@@ -1,0 +1,176 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+        url("https://images.unsplash.com/photo-1511578314322-379afb476865");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding: 20px;
+    color: #333;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Link Styles */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: white;
+}
+
+/* ID Selector */
+#mainHeader {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Element Selector */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Event Card Styles */
+.eventCard {
+    background-color: white;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grouping Selector */
+h3,
+p {
+    margin-bottom: 10px;
+}
+
+/* Typography */
+p {
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Zebra Striping */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Multi Column Layout */
+.news {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width:768px) {
+
+    li {
+        display: block;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .news {
+        column-count: 1;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
