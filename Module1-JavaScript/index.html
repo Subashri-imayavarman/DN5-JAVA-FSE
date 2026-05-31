@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Local Community Event Portal</h1>
+        <p>
+            Explore community activities, workshops,
+            music events and register online.
+        </p>
+    </header>
+
+    <!-- Search and Filter -->
+
+    <section class="controls">
+
+        <select id="categoryFilter">
+
+            <option value="All">All Events</option>
+
+            <option value="Music">Music</option>
+
+            <option value="Workshop">Workshop</option>
+
+        </select>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search Event">
+
+    </section>
+
+    <!-- Events Section -->
+
+    <section>
+
+        <h2>Upcoming Events</h2>
+
+        <div id="eventContainer"></div>
+
+    </section>
+
+    <!-- Loading Spinner -->
+
+    <div id="spinner">
+        Loading...
+    </div>
+
+    <!-- Registration Form -->
+
+    <section>
+
+        <h2>Register for Event</h2>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter Name">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email">
+
+            <select name="event">
+
+                <option>Music Festival</option>
+
+                <option>Guitar Night</option>
+
+                <option>Dance Show</option>
+
+                <option>Baking Workshop</option>
+
+                <option>Photography Workshop</option>
+
+                <option>Coding Workshop</option>
+
+                <option>Art Exhibition</option>
+
+            </select>
+
+            <button id="registerBtn">
+                Register
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <footer>
+        <p>
+            © 2026 Community Event Portal
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
