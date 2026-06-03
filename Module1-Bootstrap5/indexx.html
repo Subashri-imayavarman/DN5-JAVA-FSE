@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudentHub Portal</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+body{
+    background:#f4f7fc;
+}
+
+.hero{
+    min-height:80vh;
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    display:flex;
+    align-items:center;
+}
+
+.hero img{
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.dashboard-card{
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.course-card:hover{
+    transform:scale(1.03);
+    transition:.3s;
+}
+
+.profile-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+}
+
+.footer-icons i{
+    font-size:24px;
+    margin:0 10px;
+}
+
+.badge-live{
+    top:10px;
+    right:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">
+<i class="bi bi-mortarboard-fill"></i>
+StudentHub
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Courses</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Events</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+</ul>
+
+<form class="d-flex ms-lg-3">
+<input class="form-control me-2" placeholder="Search">
+<button class="btn btn-warning">Go</button>
+</form>
+
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-2 fw-bold">
+Learn Smarter
+</h1>
+
+<p class="lead">
+Join thousands of students learning modern technology,
+web development, AI and cloud computing.
+</p>
+
+<button class="btn btn-warning btn-lg">
+Start Learning
+</button>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="https://picsum.photos/600/400"
+class="img-fluid">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<div class="container my-5">
+
+<h2 class="fw-bold mb-4">
+Student Dashboard
+</h2>
+
+<div class="row g-4">
+
+<div class="col-12 col-md-6 col-lg-3">
+<div class="card dashboard-card shadow border-0 bg-primary text-white">
+<div class="card-body text-center">
+<h3>1500+</h3>
+<p>Students</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3">
+<div class="card dashboard-card shadow border-0 bg-success text-white">
+<div class="card-body text-center">
+<h3>80+</h3>
+<p>Courses</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3">
+<div class="card dashboard-card shadow border-0 bg-warning">
+<div class="card-body text-center">
+<h3>95%</h3>
+<p>Placement</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3">
+<div class="card dashboard-card shadow border-0 bg-danger text-white">
+<div class="card-body text-center">
+<h3>24/7</h3>
+<p>Support</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- SIDEBAR + CONTENT -->
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-3 d-none d-md-block">
+
+<div class="bg-dark text-white p-4 rounded">
+
+<h4>Quick Menu</h4>
+
+<ul class="list-unstyled">
+<li>Dashboard</li>
+<li>Assignments</li>
+<li>Projects</li>
+<li>Results</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="col-md-9">
+
+<div class="bg-white p-4 shadow rounded">
+
+<h3>Welcome Back!</h3>
+
+<p class="text-muted">
+Keep learning consistently to achieve your goals.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- COURSES -->
+
+<div class="container my-5">
+
+<h2 class="mb-4 fw-bold">
+Popular Courses
+</h2>
+
+<div class="row g-4">
+
+<div class="col-sm-6 col-lg-3">
+
+<div class="card course-card shadow">
+
+<img src="https://picsum.photos/300/200?1"
+class="card-img-top">
+
+<div class="card-body">
+<h5>HTML & CSS</h5>
+<p>Beginner Friendly</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-sm-6 col-lg-3">
+
+<div class="card course-card shadow">
+
+<img src="https://picsum.photos/300/200?2"
+class="card-img-top">
+
+<div class="card-body">
+<h5>JavaScript</h5>
+<p>Frontend Development</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-sm-6 col-lg-3">
+
+<div class="card course-card shadow">
+
+<img src="https://picsum.photos/300/200?3"
+class="card-img-top">
+
+<div class="card-body">
+<h5>Bootstrap</h5>
+<p>Responsive Design</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-sm-6 col-lg-3">
+
+<div class="card course-card shadow">
+
+<img src="https://picsum.photos/300/200?4"
+class="card-img-top">
+
+<div class="card-body">
+<h5>React</h5>
+<p>Modern UI</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROFILE CARD -->
+
+<div class="container my-5">
+
+<div class="card shadow-lg border-0">
+
+<div class="card-body text-center">
+
+<img src="https://picsum.photos/200"
+class="rounded-circle border border-primary border-3 profile-img">
+
+<h3 class="mt-3">Alex Johnson</h3>
+
+<p class="text-muted">
+Full Stack Student Developer
+</p>
+
+<button class="btn btn-primary">
+Follow
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- REGISTRATION FORM -->
+
+<div class="container my-5">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="card shadow">
+
+<div class="card-body p-4">
+
+<h3 class="mb-4">
+Student Registration
+</h3>
+
+<form>
+
+<div class="mb-3">
+<input class="form-control" placeholder="Full Name">
+</div>
+
+<div class="mb-3">
+<input class="form-control" placeholder="Email">
+</div>
+
+<div class="input-group mb-3">
+<span class="input-group-text">@</span>
+<input class="form-control" placeholder="Username">
+</div>
+
+<div class="form-check mb-3">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">
+Accept Terms & Conditions
+</label>
+</div>
+
+<button class="btn btn-success w-100">
+Register
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRICING -->
+
+<div class="container my-5">
+
+<h2 class="text-center fw-bold mb-5">
+Membership Plans
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card text-center shadow p-4">
+<h3>Basic</h3>
+<h1>₹499</h1>
+<p>Monthly Access</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card text-center shadow-lg p-4 border-primary border-3">
+<h3>Premium</h3>
+<h1>₹999</h1>
+<p>Most Popular</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card text-center shadow p-4">
+<h3>Ultimate</h3>
+<h1>₹1999</h1>
+<p>Unlimited Learning</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- ACCORDION -->
+
+<div class="container my-5">
+
+<h2 class="mb-4">
+Frequently Asked Questions
+</h2>
+
+<div class="accordion" id="faq">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+
+<button class="accordion-button"
+data-bs-toggle="collapse"
+data-bs-target="#q1">
+
+Do I get certificates?
+
+</button>
+
+</h2>
+
+<div id="q1"
+class="accordion-collapse collapse show">
+
+<div class="accordion-body">
+Yes, certificates are provided after completion.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL BUTTON -->
+
+<div class="text-center my-5">
+
+<button class="btn btn-primary btn-lg"
+data-bs-toggle="modal"
+data-bs-target="#loginModal">
+
+Student Login
+
+</button>
+
+</div>
+
+<!-- MODAL -->
+
+<div class="modal fade" id="loginModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Login</h5>
+<button class="btn-close"
+data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<div class="form-floating mb-3">
+<input class="form-control" id="email">
+<label>Email</label>
+</div>
+
+<div class="form-floating">
+<input class="form-control" id="pass">
+<label>Password</label>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+<h4>StudentHub Portal</h4>
+
+<div class="footer-icons">
+
+<i class="bi bi-facebook"></i>
+<i class="bi bi-instagram"></i>
+<i class="bi bi-linkedin"></i>
+<i class="bi bi-github"></i>
+
+</div>
+
+<p class="mt-3 mb-0">
+© 2026 StudentHub. All Rights Reserved.
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
